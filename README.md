@@ -1,0 +1,3 @@
+# WeekGenz
+------------
+#### REPOSITORY OF WEEKGENZ.

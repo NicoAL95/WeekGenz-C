@@ -1,0 +1,1093 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Public+Sans:wght@400;500;600;700;800;900&family=Quicksand:wght@400;600;700&family=Roboto+Mono:wght@700&family=Work+Sans:wght@300;600&display=swap');
+
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* End Inter Font */
+
+/* Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+/* End Fira Code */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  /* Everett Fonts */
+    @font-face {
+      font-family: 'eveLight';
+      src: url('/libraries/fonts/Everett-Light.otf') format('opentype');
+  }
+    @font-face {
+      font-family: 'eveMed';
+      src: url('/libraries/fonts/Everett-Medium.otf') format('opentype');
+  }
+    @font-face {
+      font-family: 'eveBold';
+      src: url('/libraries/fonts/Everett-Bold.otf') format('opentype');
+  }
+  /* End Everett Fonts */
+}
+
+@layer components {
+  .comingSoon {
+    @apply h-screen w-full font-dmsans flex items-center justify-center text-mainWhite bg-mainBlack;
+  }
+
+  .headSects {
+    @apply px-[45px] sm:px-[85px] pt-[150px] pb-[70px];
+  }
+
+  .gapSects {
+    @apply px-[45px] sm:px-[85px] py-[70px];
+  }
+  .gapSide{
+    @apply px-[45px] sm:px-[85px]
+  }
+  .gapXas {
+    @apply pl-[45px] pr-[45px] sm:pl-[85px] sm:pr-[75px] pb-[90px];
+  }
+  .superTitle {
+    @apply text-center capitalize;
+  }
+  .littleTitle {
+    @apply font-quicksand font-[500] text-mainWhite/70 text-[18px] xs:text-[22px];
+  }
+  .mainTitle {
+    @apply font-eveMed tracking-[-0.025em] text-mainWhite text-[45px] xs:text-[65px] mt-[5px] leading-tight;
+  }
+  .descTitle {
+    @apply font-inter text-semiGrey mt-[20px] text-[13px] gs:text-[15px];
+  }
+  .littleTitlePro {
+    @apply font-quicksand font-[600] text-mainBlack text-[17px] xs:text-[20px] xg:text-[22px];
+  }
+  .mainTitlePro {
+    @apply font-eveMed text-mainBlack text-[35px] ss:text-[40px] xs:text-[50px] mk:text-[35px] xg:text-[45px] mt-[5px] leading-tight tracking-[-0.025em];
+  }
+  .descTitlePro {
+    @apply font-quicksand font-[400] text-semiGrey mt-[20px] text-[12px] xs:text-[14px] xg:text-[18px];
+  }
+  .solBut {
+    @apply cursor-pointer text-mainBlack font-quicksand py-[12px] px-[40px] bg-mainWhite rounded-full font-[700] drop-shadow-[0_1px_4px_rgba(55,125,255,50)] hover:drop-shadow-[0_1.8px_9px_rgba(55,125,255,50)] text-center transition-all;
+  }
+  .outBut {
+    @apply text-mainWhite font-quicksand py-[12px] px-[40px] outline outline-1 outline-mainWhite cursor-pointer rounded-full font-[700] hover:bg-mainWhite hover:text-mainBlack flex items-center justify-center space-x-2 text-center transition-all;
+  }
+
+  /* Navbar */
+  .navbar {
+    @apply fixed h-[80px] flex justify-between items-center px-[45px] xg:px-[85px] capitalize font-quicksand text-[16px] z-[100] bg-kingBlack/80 rounded-[12px] left-1/2 -translate-x-1/2 transition-all duration-300 ease-in-out;
+  }
+
+  .navStop {
+    @apply bg-kingBlack top-0 w-full;
+  }
+
+  .navMove {
+    @apply drop-shadow-[0_15px_25px_rgba(16,129,232,0.15)] top-[3%] w-[92%] lg:w-[88%] bg-clip-padding backdrop-filter backdrop-blur-[3px] bg-opacity-30;
+  }
+
+  .navWrapLinks {
+    @apply absolute w-full bg-kingBlack rounded-[15px] p-8  left-1/2 -translate-x-1/2 mz:static mz:left-0 mz:translate-x-0 mz:bg-transparent z-[5] mz:w-1/2 mz:p-0; 
+  }
+  .navOn {
+    @apply top-[30%] transition-all duration-500 ease-in-out;
+  }
+  .navOff {
+    @apply top-[-500%] transition-all ease-in-out;
+  }
+  .navLinks {
+    @apply flex flex-col mz:flex-row mz:space-x-[50px] text-mainWhite justify-evenly;
+  }
+  .navActive {
+    @apply font-[700];
+  }
+  .navItem {
+    @apply select-none hover:bg-mainGrey/5 hover:px-4 cursor-pointer mz:hover:bg-transparent mz:hover:px-0 py-2 transition-all border-b-[1px] border-mainGrey/20 hover:border-kingBlack mz:border-0  duration-200; 
+  }
+  .navBut {
+    @apply text-mainWhite font-quicksand py-[8px] px-[25px] outline outline-1 outline-mainWhite cursor-pointer rounded-full font-[700] hover:bg-mainWhite hover:text-mainBlack flex items-center justify-center space-x-2 text-center transition-all;
+  }
+  .navWeekHide {
+    @apply flex justify-between items-center mz:hidden border-b-[1px] border-mainGrey/30 pb-[5px];
+  }
+  .navBurger {
+    @apply flex items-center mz:hidden;
+  }
+  .navFoot {
+    @apply font-worksans mt-[30px] text-[12px] text-center mz:hidden;
+  }
+  /* End Navbar */
+
+  /* Headcode */
+  .headCode {
+    @apply headSects bg-kingBlack;
+  }
+  .headTitle {
+    @apply text-center;
+  }
+  .bigHeadTitle {
+    @apply bg-gradient-to-r bg-clip-text  text-transparent 
+    from-[#0087C1] via-[#C1008A] to-[#33009E]
+    animate-colorAni font-eveMed  tracking-[-0.025em] text-[35px] leading-[35px] ms:text-[50px] ms:leading-[50px] mk:leading-[60px] mk:text-[60px] lg:text-[80px] lg:leading-[80px];
+  }
+  .bigHeadDesc {
+    @apply text-mainGrey font-inter font-[300] mt-[20px] mx-auto text-[12px] w-full gs:text-[16px] md:text-[18px] md:w-[90%] gg:w-[80%] xlg:w-[65%] xjg:w-[50%];
+  }
+  .bigHeadBut {
+    @apply mt-[40px];
+  }
+  .codeWrapper {
+    @apply mt-[50px] grid grid-rows-1 grid-cols-12;
+  }
+  .codeRelative{
+    @apply w-full h-full relative
+  }
+  .coders {
+    @apply col-span-12 col-start-1 h-[630px] gs:h-[610px] max-w-[1330px] xjg:col-start-2 exl:col-start-3;
+  }
+  .editBasis {
+    @apply w-full h-full rounded-b-[15px] relative flex;
+  }
+  .editHead {
+    @apply w-full h-[50px] flex border border-mainGrey/40 rounded-t-[15px] pl-5 bg-kingBlack;
+  }
+  .editList {
+    @apply flex space-x-1 items-center;
+  }
+  .bulHead {
+    @apply w-[15px] h-[15px] rounded-full;
+  }
+  .editNums {
+    @apply h-[355px] w-[45px] bg-[#111111] border-l-[1px] border-b-[1px] border-mainGrey/40 rounded-bl-[15px] flex flex-col items-center font-fira pt-[15px] text-mainWhite/40 space-y-1 text-[16px];
+  }
+  .topCode {
+    @apply absolute top-0 left-0 sm:left-[15%] h-[405px] w-[100%] md:w-[90%] lg:w-[75%] xz:w-[60%] rounded-[15px];
+  }
+  .botCode {
+    @apply absolute bottom-0 right-0 sm:right-[15%] w-[100%] md:w-[90%] lg:w-[75%] xz:w-[60%] rounded-[15px];
+  }
+  .typeAni {
+    @apply w-full h-[355px] bg-kingBlack rounded-br-[15px] border-r-[1px] border-b-[1px] border-mainGrey/40 font-fira text-mainWhite pt-[15px] pl-[15px] leading-[27px] text-[14px] xs:text-[15px] ms:text-[18px];
+  }
+  .aniWrap {
+    @apply w-full h-full outline-1 outline-mainGrey rounded-b-[15px] relative flex;
+  }
+  .pictAni {
+    @apply w-full h-[355px] bg-kingBlack rounded-b-[15px] border-x-[1px] border-b-[1px] border-mainGrey/40 font-roboto text-mainWhite p-[30px] leading-[27px] flex gs:space-x-8;
+  }
+  .aniLeftWrap {
+    @apply hidden gs:w-[40%] sm:w-[35%] h-full gs:flex flex-col justify-between;
+  }
+  .aniLong {
+    @apply w-[70%] h-full flex flex-col justify-evenly space-y-2;
+  }
+  .aniMom {
+    @apply flex list-none space-x-3 w-full animate-pulse;
+  }
+  .aniMini {
+    @apply bg-[#3E3E3E] h-[10px] rounded-full w-[19%];
+  }
+  .aniHeight {
+    @apply flex flex-col space-y-4 animate-pulse;
+  }
+  .editWaffle {
+    @apply w-full gs:w-[60%] sm:w-[65%] h-full space-y-8;
+  }
+  .topAniLeft {
+    @apply flex justify-between items-center animate-pulse;
+  }
+  .aniCart {
+    @apply bg-mainWhite w-[35px] h-[35px] hidden md:flex xs:w-[40px] xs:h-[40px] rounded-full items-center justify-center text-mainBlack text-[20px];
+  }
+  .floatLeft {
+    @apply absolute left-[-8%] bottom-[2%] sm:left-[-27%] xg:left-[-23%] sm:bottom-[22%] mk:bottom-[28%] xz:left-[-30%] xlg:left-[-22%] xjg:left-[-22%] z-[5];
+  }
+  .floatRight {
+    @apply absolute right-[-8%] bottom-[12%] sm:right-[-27%] xg:right-[-15%] sm:bottom-[30%] z-[5];
+  }
+  .floatCard {
+    @apply p-[20px] rounded-[16px] bg-kingBlack w-full h-full;
+  }
+  .floatCardHead {
+    @apply flex w-full h-full space-x-[15px] items-center;
+  }
+  .floatImg {
+    @apply w-[50px] h-[50px] rounded-full relative;
+  }
+  .floatTitle {
+    @apply font-quicksand font-[600];
+  }
+  .floatDesc {
+    @apply font-nunito text-[12px] mt-[17px];
+  }
+  /* End Headcode */
+
+  /* About Us */
+  .aboutUs {
+    @apply gapSects bg-kingBlack text-center relative;
+  }
+  .aboutCont {
+    @apply grid grid-rows-1 grid-cols-12 gap-y-7 lg:gap-y-0 lg:gap-x-5;
+  }
+  .aboutPict {
+    @apply col-span-12 lg:col-span-4 xg:col-span-6 relative aspect-w-3 aspect-h-2;
+  }
+  .aboutDesc {
+    @apply col-span-12 lg:col-span-8 xg:col-span-6 font-inter text-semiGrey text-left 
+    flex items-center;
+  }
+  .aboutWord {
+    @apply leading-relaxed;
+  }
+  .aboutBut {
+    @apply mt-[25px] flex flex-col space-y-5 xs:space-y-0 xs:flex-row xs:space-x-5;
+  }
+  /* End About Us */
+
+  /* Trusted */
+  .trusted {
+    @apply bg-kingBlack text-center relative pb-[70px] z-20;
+  }
+  .trustedTitle{
+    @apply gapSects;
+  }
+  .trustedImg {
+    @apply relative w-[250px] h-[60px] ms:h-[70px] mr-[80px];
+  }
+  .marTrust{
+    @apply w-full h-full;
+  }
+  /* End Trusted */
+
+  /* Portofolio */
+  .portofolio {
+    @apply gapSects bg-kingBlack text-center relative;
+  }
+  .aboutCont {
+    @apply pt-[40px];
+  }
+  .aboutPorto {
+    @apply grid grid-rows-1 grid-cols-12 xs:gap-x-[30px] mt-[50px] gap-y-[30px] lg:gap-y-0;
+  }
+  .portoCol{
+    @apply col-span-12 xs:col-span-6 lg:col-span-4 
+  }
+  .portoColLast{
+    @apply xs:col-start-4 lg:col-start-9
+  }
+  .portoImg {
+    @apply relative w-full h-full aspect-w-2 aspect-h-2 rounded-[15px];
+  }
+  .portoHide {
+    @apply hidden xs:block lg:hidden;
+  }
+  .imgPorto {
+    @apply rounded-[15px] opacity-75 hover:opacity-100 transition-all;
+  }
+  .portoOverlay {
+    @apply absolute bottom-0 left-0 bg-mainBlack/60 h-full opacity-100 hover:opacity-0;
+  }
+  .prevPorto {
+    @apply text-mainWhite py-[10px] px-[25px] outline outline-1 outline-mainWhite rounded-lg font-dmsans font-[500] hover:bg-mainWhite hover:text-mainBlack transition-all;
+  }
+  .portoName {
+    @apply absolute bottom-0 left-0 bg-mainBlack/30 h-full flex items-center justify-center rounded-[15px] transition-all opacity-0 hover:opacity-100;
+  }
+  /* End Portofolio */
+
+  /* TestiSlider */
+  .testiSlider {
+    @apply gapSects bg-kingBlack text-center relative;
+  }
+  .sliderTesti {
+    @apply mt-[50px];
+  }
+  .miniCard {
+    @apply px-[40px] pt-[40px] bg-darkBlue max-w-full h-[320px] rounded-[20px] mb-[50px];
+  }
+  .miniHead {
+    @apply flex items-center space-x-[30px];
+  }
+  .miniImg {
+    @apply relative w-[70px] h-[70px];
+  }
+  .miniProfile {
+    @apply font-quicksand text-left capitalize;
+  }
+  .miniName {
+    @apply text-[20px] text-mainWhite font-[600];
+  }
+  .miniJob {
+    @apply text-[14px] text-semiGrey font-[400];
+  }
+  .miniBody {
+    @apply mt-[25px] text-left font-quicksand text-[16px] text-mainWhite/80;
+  }
+  /* End TestiSlider */
+
+  /* Superman */
+  .superman {
+    @apply gapSects bg-kingBlack;
+  }
+  .superFounder {
+    @apply grid grid-rows-1 grid-cols-12 mt-[70px] gap-y-[30px] mx:gap-x-[30px] mx:gap-y-0;
+  }
+  .founderCard {
+    @apply col-span-12 mx:col-span-6 bg-darkBlue py-[50px] px-[40px] xg:px-[80px] rounded-[24px] flex flex-col items-center;
+  }
+  .founderImg {
+    @apply w-[90px] h-[90px] mx:w-[110px] mx:h-[110px] relative rounded-full;
+  }
+  .imgFace {
+    @apply rounded-full;
+  }
+  .founderName {
+    @apply font-quicksand text-mainWhite font-[600] text-[20px] xg:text-[25px] mt-[25px];
+  }
+  .founderRole {
+    @apply font-quicksand text-mainWhite/50 font-[500] text-[13px] xg:text-[18px] mt-[2px];
+  }
+  .founderQuotes {
+    @apply font-nunito text-mainWhite font-[400] text-[21px] xg:text-[26px] mt-[30px] text-center;
+  }
+  /* End Superman */
+
+  /* Collaborating */
+  .collaborating {
+    @apply gapSects bg-kingBlack;
+  }
+  .collaWrap {
+    @apply grid grid-rows-1 grid-cols-12 gap-x-5;
+  }
+  .collaLeft {
+    @apply col-span-12 md:col-span-6;
+  }
+  .collaCont {
+    @apply text-center md:text-left;
+  }
+  .collaBut {
+    @apply mt-[25px] flex justify-center md:justify-start;
+  }
+  .collaRight {
+    @apply col-span-12 h-[400px] mt-[50px] md:col-span-6 md:h-full md:mt-0;
+  }
+  .collaPict {
+    @apply absolute w-[90%] ss:w-4/5 xs:w-3/5 md:w-4/5 mg:w-3/5;
+  }
+  .collaImg {
+    @apply aspect-w-2 aspect-h-2 md:aspect-w-3 md:aspect-h-3 xg:aspect-w-3 xg:aspect-h-2;
+  }
+  /* End COllaborating */
+
+  /* Footer */
+  .footer {
+    @apply gapSects bg-kingBlack;
+  }
+  .fooHead {
+    @apply flex flex-col md:flex-row justify-between items-center;
+  }
+  .headAct {
+    @apply flex flex-col mx:flex-row space-y-[30px] mx:space-y-0 font-dmsans mx:space-x-[44px] items-center justify-between w-full md:w-auto mt-[30px] md:mt-0;
+  }
+  .headText {
+    @apply text-[22px] text-mainWhite;
+  }
+  .headBtn {
+    @apply px-[45px] py-[14px] bg-mainWhite text-mainBlack text-[17px] rounded-[8px] font-[700];
+  }
+  .fooLine {
+    @apply w-full h-[1px] my-[40px] bg-[#262626];
+  }
+  .fooConn {
+    @apply grid grid-rows-1 grid-cols-12;
+  }
+  .connDesc {
+    @apply col-span-12 lg:col-span-4 font-dmsans text-mainWhite text-[22px];
+  }
+  .connGrey {
+    @apply text-[15px] text-mainGrey mt-[18px];
+  }
+  .connLink {
+    @apply col-span-12 lg:col-span-8 font-dmsans flex flex-col space-y-[40px] xs:space-y-0 xs:flex-row justify-between lg:justify-around text-white mt-[40px] lg:mt-0;
+  }
+  .connLinkItem {
+    @apply flex flex-col space-y-[20px];
+  }
+  .connLinkTitle {
+    @apply text-mainPink text-[17px] font-[400];
+  }
+  .connLinkGo {
+    @apply text-[15px] capitalize text-mainWhite hover:underline hover:underline-offset-1;
+  }
+  .fooTerms {
+    @apply mt-[40px] mx:mt-[70px] mb-[40px] flex xs:justify-between flex-col-reverse mx:flex-row;
+  }
+  .termsLink {
+    @apply flex space-x-[42px] font-dmsans font-[400] text-mainWhite text-[15px] mt-[30px] mx:mt-0;
+  }
+  .termsHov {
+    @apply hover:underline hover:underline-offset-1;
+  }
+  .termsIcon {
+    @apply flex space-x-[43px] text-mainWhite text-[20px];
+  }
+  .fooBottom {
+    @apply font-worksans text-mainGrey text-[12px] xs:text-[15px] font-[300] text-center;
+  }
+  .fooBold {
+    @apply font-[600] text-white;
+  }
+  /* End Footer */
+
+  /* Head Project */
+  .headProject {
+    @apply grid grid-rows-1 grid-cols-12 pt-[80px] bg-kingBlack;
+  }
+  .headProjTitle {
+    @apply col-span-12 mk:col-span-6 h-full flex items-center justify-center bg-mainWhite py-[40px];
+  }
+  .centerHead {
+    @apply w-[75%] xg:w-[67%];
+  }
+  .headProjCont {
+    @apply col-span-12 mk:col-span-6;
+  }
+  .headProjGrid {
+    @apply grid grid-rows-1 grid-cols-12;
+  }
+  .botHeadProj {
+    @apply flex justify-center items-center font-eveLight text-white text-[25px] mz:text-[35px] tracking-[-0.025em] animate-pulse;
+  }
+  .projRight {
+    @apply col-span-12 aspect-w-3 aspect-h-1 bg-kingBlack;
+  }
+  .portoHead {
+    @apply relative col-span-6 aspect-w-1 aspect-h-1;
+  }
+  .showProj {
+    @apply px-[45px] sm:px-[85px] pt-[20px] mk:pt-[70px] pb-[70px] bg-kingBlack;
+  }
+  .showLoop {
+    @apply grid grid-rows-1 grid-cols-12 xs:gap-x-6 gap-y-6 lg:gap-x-8 lg:gap-y-8;
+  }
+  .loadShow {
+    @apply mt-[70px] flex w-full justify-center;
+  }
+  /* End Head Project */
+
+  /* Search */
+
+  /* End Search */
+  .searchProj {
+    @apply min-h-screen flex items-center justify-center font-publicsans bg-kingBlack gapSects;
+  }
+  .searchTitle {
+    @apply text-center;
+  }
+  .topSearchTitle {
+    @apply relative w-full h-[25px];
+  }
+  .botSearchTitle {
+    @apply text-mainWhite font-[700] text-[30px] ms:text-[45px];
+  }
+  .searchDesc {
+    @apply text-outGrey font-publicsans text-center text-[12px] ms:text-[14px] flex justify-center mt-[20px];
+  }
+  .shortSearch {
+    @apply w-full gg:w-[80%];
+  }
+  .searchInput {
+    @apply grid grid-rows-1 grid-cols-12 mt-[30px];
+  }
+  .searchInputForm {
+    @apply bg-darkHold w-full py-[12px]   rounded-[10px] placeholder:text-center placeholder:font-publicsans placeholder:text-[#525252] placeholder:capitalize text-[13px] ms:text-[15px] text-mainWhite text-center focus:outline-none focus:border-sky-500 focus:ring-blue-500  focus:ring-1 uppercase;
+  }
+  .searchBut {
+    @apply mt-[50px] flex justify-center;
+  }
+  .butSearch {
+    @apply bg-mainWhite py-[10px] ms:py-[15px] px-[60px] ms:px-[70px] font-publicsans font-[700] rounded-[10px] text-[13px] ms:text-[15px] hover:bg-outGrey transition-all;
+  }
+  .searchHide {
+    @apply hidden gg:block gg:col-span-2;
+  }
+  .searchSpan {
+    @apply col-span-12 gg:col-span-8;
+  }
+
+  /* Id Head */
+  .idHead {
+    @apply px-[45px] sm:px-[85px] pt-[150px] bg-kingBlack;
+  }
+  .idOwner {
+    @apply font-publicsans;
+  }
+  .clName {
+    @apply text-outGrey font-[500] text-[30px] capitalize;
+  }
+  .clTitle {
+    @apply text-mainWhite font-[700] text-[35px] capitalize;
+  }
+  .idLinks {
+    @apply flex flex-col space-y-[30px] mg:space-y-0 mg:flex-row mg:space-x-[40px] gg:space-x-[60px] pb-[30px] border-b border-outGrey;
+  }
+  .idLinksItem {
+    /* @apply col-span-3 xg:col-span-2 */
+  }
+  .idLinks {
+    @apply font-publicsans mt-[45px];
+  }
+  .linkTitle {
+    @apply text-mainWhite font-[700] text-[16px] lg:text-[20px];
+  }
+  .linkContent {
+    @apply font-[400] text-[21px] lg:text-[25px] text-outGrey;
+  }
+  /* End Id Head */
+
+  /* Id Desc */
+  .idDesc {
+    @apply bg-kingBlack px-[45px] sm:px-[85px] pt-[35px] font-publicsans;
+  }
+  .idDescTitle {
+    @apply text-mainWhite font-[700] text-[18px] gs:text-[20px];
+  }
+  .idDescCon {
+    @apply text-outGrey font-[400] text-[16px] gs:text-[18px] mt-[20px];
+  }
+  .idList {
+    @apply pl-[35px] mt-[20px];
+  }
+  .listDesc {
+    @apply text-outGrey font-[400] text-[16px] gs:text-[18px] capitalize mt-[10px];
+  }
+  .idTimeline {
+    @apply mt-[40px];
+  }
+  .olTime {
+    @apply relative border-l-2 border-[#37404F] pb-[1px];
+  }
+  .olPush {
+    @apply mb-10 ml-[30px];
+  }
+  .olBull {
+    @apply absolute w-5 h-5 bg-[#6E5CA8] rounded-full -left-[0.7rem] border border-mainBlack;
+  }
+  .olTitle {
+    @apply text-[20px] font-publicsans text-mainWhite font-[700];
+  }
+  .olDate {
+    @apply text-[16px] font-publicsans text-outGrey;
+  }
+  .olDesc {
+    @apply mb-4 font-publicsans font-[400] text-mainWhite text-[14px] mt-[10px];
+  }
+  .olLink {
+    @apply text-outGrey border-b border-outGrey flex w-fit items-center space-x-2 text-[12px] font-[600] transition-all hover:text-mainWhite hover:border-mainWhite;
+  }
+  .olTimeRev {
+    @apply relative border-l-2 border-[#4F4837] pb-[1px];
+  }
+  .olBullRev {
+    @apply absolute w-5 h-5 bg-[#FFD78A] rounded-full -left-2.5 border border-mainBlack;
+  }
+  .greyMsg {
+    @apply font-[400] text-[16px] sm:text-[20px] font-publicsans text-outGrey mt-[20px];
+  }
+  .availRev {
+    @apply hidden;
+  }
+  /* End Id Desc */
+
+  /* Page Lost */
+  .pageLost {
+    @apply bg-kingBlack text-mainWhite  w-full h-screen overflow-hidden flex justify-center items-center gapSects;
+  }
+  /* End Page Lost */
+
+  /* Header Detail */
+  .headerDetail{
+    @apply pt-[100px] pb-[40px] bg-kingBlack
+  }
+  .imgTron{
+    @apply relative aspect-w-3 aspect-h-1
+  }
+  .detContent{
+    @apply px-[45px] sm:px-[85px] pt-[50px]
+  }
+  .detTitle{
+    @apply font-publicsans text-mainWhite text-[30px] xs:text-[40px] mk:text-[55px] xg:text-[70px] font-[700] pb-[40px] capitalize
+  }
+  .detDyna{
+    @apply grid grid-rows-1 grid-cols-12 gap-y-5 md:gap-y-0
+  }
+  .dynaChildLeft{
+    @apply col-span-12 md:col-span-7 xg:col-span-8
+  }
+  .dynaChildRight{
+    @apply col-span-12 md:col-span-5 xg:col-span-4
+  }
+  .portShare{
+    @apply flex space-x-3 mz:space-x-4
+  }
+  .iconFlex{
+    @apply relative w-[45px] h-[45px] md:w-[40px] md:h-[40px] mz:w-[45px] mz:h-[45px] opacity-80 hover:opacity-100 transition-all duration-200
+  }
+  .rolesTitle{
+    @apply font-publicsans font-[700] text-mainWhite text-[18px] mk:text-[22px]
+  }
+  .rolesDet{
+    @apply flex font-publicsans text-[#64FF73] capitalize text-[18px] gs:text-[22px] mk:text-[27px]
+  }
+  
+  .role{
+    @apply px-[7px]
+  }
+  .roleNext{
+    @apply text-[18px] ss:text-[22px] mz:text-[28px] px-2
+  }
+  .detStats{
+    @apply pt-[50px] grid grid-rows-1 grid-cols-12 gap-x-2 gap-y-4 mz:gap-y-0
+  }
+  .statSpace{
+    @apply col-span-6 xs:col-span-4 mz:col-span-2
+  }
+  .statBig{
+    @apply col-span-4
+  }
+  .statTitle{
+    @apply font-publicsans text-[17px] gg:text-[20px] text-mainWhite font-[600] capitalize
+  }
+  .statItem{
+    @apply font-publicsans text-[17px] gg:text-[20px] text-mainGrey capitalize
+  }
+  /* End Header Detail */
+
+  /* Content Detail */
+  .contentDetail{
+    @apply px-[45px] sm:px-[85px] py-[20px] bg-kingBlack
+  }
+  .condetTitle{
+    @apply font-publicsans font-[700] text-[30px] xs:text-[40px] mz:text-[50px] text-mainWhite
+  }
+  .condetMain{
+    @apply pt-[10px]
+  }
+  .condetPar{
+    @apply text-[16px] xs:text-[18px] mz:text-[20px] font-publicsans text-mainGrey my-[25px]
+  }
+  .condetImg{
+    @apply relative aspect-w-2 aspect-h-1
+  }
+  /* End Content Detail */
+
+  /* Timeline Detail */
+  .timelineDetail{
+    @apply px-[45px] sm:px-[85px] bg-kingBlack
+  }
+  .timeTitle{
+    @apply font-publicsans font-[700] text-[20px] xs:text-[25px] mz:text-[35px] text-mainWhite mb-[30px]
+  }
+  .timeGrid{
+    @apply grid grid-rows-1 grid-cols-12 gap-y-6 xs:gap-y-0
+  }
+  .timeItem{
+    @apply col-span-12 ss:col-span-4 mz:col-span-2
+  }
+  .timeWork{
+    @apply font-publicsans font-[700] text-mainWhite text-[18px] xs:text-[20px] xz:text-[25px] capitalize
+  }
+  .timeDays{
+    @apply font-publicsans text-[20px] ss:text-[23px] xs:text-[25px] xz:text-[30px] text-mainGrey capitalize
+  }
+  /* End Timeline Detail */
+}
+
+/* Split Web */
+.splitWeb{
+  @apply relative pt-[60px]
+}
+.splitSuperTitle{
+  @apply mb-[20px] text-center text-white font-eveMed  tracking-[-0.025em] text-[60px] leading-[60px] ms:text-[85px] ms:leading-[85px] lg:text-[110px] lg:leading-[110px];
+}
+.splitSuperDesc{
+  @apply w-[85%] mx-auto font-inter text-semiGrey text-center pb-[140px] text-[13px] gs:text-[15px] sm:w-[60%] mk:w-[50%] xg:w-[40%] 
+}
+.flexForce{
+  @apply mt-[-120px]
+}
+.splitEffect{
+  @apply absolute w-full h-full bg-gridEffect bg-cover bg-no-repeat bg-top
+}
+.splitBackground{
+  @apply absolute w-full h-full bg-gridSquare bg-cover bg-center bg-no-repeat
+}
+.splitSuperHead{
+  @apply bg-kingBlack w-full h-[52px] border-t border-x border-mainGrey/40 rounded-t-lg flex items-center px-5
+}
+.splitHeadCode{
+  @apply w-[65%] ms:w-[50%] h-[28px] bg-[#191919] mx-auto rounded-md font-inter text-[11px] ms:text-[12px] flex items-center justify-center
+}
+.splitHeadRow{
+  @apply bg-[#070707] w-full h-[35px] flex items-center border border-mainGrey/40
+}
+.splitHeadTitle{
+  @apply text-white/70 font-inter font-[300] text-[13px] bg-[#141414] py-[6px] px-5 rounded-tr-lg
+}
+/* End Split Web */
+
+/* Head About */
+.headAbout {
+  @apply gapSects mt-[30px]
+}
+/* End Head About */
+
+/* Services High */
+.servicesHigh{
+  @apply gapSects text-mainWhite max-w-full
+}
+.servHighHead{
+  @apply text-center
+}
+.servicesGrid{
+  @apply grid grid-rows-1 grid-cols-12 gap-4
+}
+.servHighCode{
+  @apply col-span-6
+}
+.servHighDesc{
+  @apply col-span-6 flex flex-col justify-between p-[60px] space-y-[40px]
+}
+.servHighMini{
+  @apply col-span-12 mz:col-span-6 pt-[60px] xg:px-[30px] mz:px-[60px]
+}
+.servHighImg{
+  @apply w-[60px] h-[60px] mz:w-[50px] mz:h-[50px] mb-[20px] mx-auto mz:mx-0
+}
+.servHighImgBox{
+  @apply relative w-full h-full aspect-1
+}
+.servHighMiniTitle{
+  @apply text-mainWhite font-inter font-[600] text-[20px] mk:text-[28px] tracking-[-.05em] text-center mz:text-left
+}
+.servHighMiniDesc{
+  @apply text-[#888] font-inter tracking-[-.02em] text-[13px] leading-[25px] mk:text-[16px] mk:leading-[28px] font-[400] text-center mz:text-left
+}
+.servCon {
+  @apply flex justify-center mz:justify-start mt-[15px];
+}
+.servBut {
+  @apply cursor-pointer text-mainWhite/40 hover:text-mainWhite font-inter font-[500] flex items-center space-x-2 underline underline-offset-2 transition-all ease-in-out duration-200;
+}
+/* End Services High */
+
+/* Work Flow */
+.workFlow{
+  @apply gapSects bg-kingBlack relative
+}
+.workSuperDesc{
+  @apply w-full mx-auto font-inter text-semiGrey text-center pb-[50px] text-[13px] mx:pb-[100px] gs:text-[15px] sm:w-[60%] mk:w-[50%] xg:w-[40%] 
+}
+.workFlex{
+  @apply flex flex-col gm:flex-row
+}
+.workCode{
+  @apply flex-1 pr-0 order-2 pb-[30px] pt-[30px] gm:pt-[40px] gm:order-1 gm:pr-[64px] gm:pb-[100px]
+}
+.workBox{
+  @apply w-full h-fit border border-[#30363d] rounded-lg bg-[#0d1117]
+}
+.uiBox{
+  @apply h-fit w-full bg-white rounded-lg relative overflow-x-hidden
+}
+.uiHead{
+  @apply flex py-[10px] px-5 w-full rounded-md font-eveMed
+}
+.uiLogo{
+  @apply font-worksans tracking-[-0.1rem] font-[500] flex justify-between w-full h-full items-center
+}
+.uiBody{
+  @apply grid grid-rows-1 grid-cols-2
+}
+.uiCont{
+  @apply font-poppins flex flex-col justify-center px-5
+}
+.uiDate{
+  @apply font-[400] text-[9px] tracking-[-.02em] text-darkBlue text-left
+}
+.uiMainText{
+  @apply font-[500] text-[12px] tracking-[-.02em] text-darkBlue mt-[5px] mb-[10px] xs:text-[14px] gs:text-[17px]
+}
+.uiDesc{
+  @apply font-[400] text-[8px] tracking-[-.02em] text-darkBlue xs:text-[10px]
+}
+.uiImg{
+  @apply col-span-1 w-full h-[270px] relative rounded-br-lg bg-woman bg-cover bg-no-repeat bg-top
+}
+.miniSide{
+  @apply w-[150px] h-full absolute top-0 z-[20] transition-all ease-in-out duration-500
+}
+.miniAct{
+  @apply bg-white border-l border-[#444]/30 right-0
+}
+.miniUna{
+  @apply bg-mainBlack right-[-50%]
+}
+.miniFlex{
+  @apply flex flex-col w-full h-full justify-between
+}
+.miniFooter{
+  @apply font-inter font-[500] text-darkHold text-[9px] tracking-[-.02rem] text-center py-3
+}
+.miniUl{
+  @apply flex flex-col
+}
+.miniLi{
+  @apply font-[400] text-[11px] tracking-[-.02em] px-3 py-2 xs:text-[13px]
+}
+.codeBox{
+  @apply w-full h-fit p-3 rounded-lg bg-[#201732] grid grid-rows-1 grid-cols-4
+}
+.codeLeft{
+  @apply col-span-1 h-[300px] rounded-l-lg bg-[#211835]
+}
+.codeLeftButton{
+  @apply w-full h-fit flex space-x-[4px] p-3
+}
+.smallBulBut{
+  @apply w-[9px] h-[9px] rounded-full
+}
+.codeLeftBox{
+  @apply px-2 pt-1 pb-2 xg:px-3
+}
+.newFile{
+  @apply border border-[#444] rounded-sm font-inter text-semiGrey px-[4px] py-[1px] ms:rounded-md text-[5px] ms:text-[7px] gs:text-[9px]
+}
+.codeLeftFile{
+  @apply font-inter text-semiGrey/80 text-[10px] px-2 tracking-[-.02em] font-[500] xg:px-3 xg:text-[12px]
+}
+.topFolder{
+  @apply flex px-1
+}
+.folderTitle{
+  @apply text-[7px] font-inter text-semiGrey tracking-[-.02em] font-[500] ml-[0.12rem] ms:text-[9px] xg:text-[11px]
+}
+.fileFlex{
+  @apply flex space-x-[2px] font-inter text-semiGrey/80 pl-6 pr-1 tracking-[-.02em] font-[500] py-1 text-[7px]  ms:text-[9px] xg:text-[11px]
+}
+.codeRight{
+  @apply col-span-3 h-[300px] rounded-r-lg bg-[#241D3E]
+}
+.codeRightTop{
+  @apply px-3 py-2 w-fit flex items-center space-x-3 text-semiGrey/80 tracking-[-.02em] font-[500] font-inter text-[9px] border-b border-[#40326F]
+}
+.codeRightBody{
+  @apply p-2 flex w-full h-full
+}
+.codeNumberMini{
+  @apply w-[10px] h-fit
+}
+.codeBlockMini{
+  @apply pl-3 flex-1 font-fira text-semiGrey text-[9px] leading-4
+}
+.codeYellow{
+  @apply text-[#EACD61]
+}
+.codeEgg{
+  @apply text-[#1CDEDB]
+}
+.codeBlue{
+  @apply text-[#69C3FF]
+}
+.codeRed{
+  @apply text-[#DA4A4A]
+}
+.codeGreen{
+  @apply text-[#2ACE63]
+}
+.ulMiniCode{
+  @apply pr-4 border-r border-semiGrey/20
+}
+.miniLine{
+  @apply text-semiGrey/50 tracking-[-.02em] font-[500] font-fira text-[9px] leading-4
+}
+.wiIcon{
+  @apply w-3 h-3 ms:w-4 ms:h-4
+}
+.gitHead{
+  @apply bg-[#161b22] px-[16px] py-[12px] w-full rounded-t-lg flex space-x-2 items-center
+}
+.gitHeadTitle{
+  @apply text-mainWhite font-inter font-[600] text-[13px] tracking-[-.02em] leading-[1.4]
+}
+.gitHeadAuth{
+  @apply text-[#8b949e] font-inter font-[400] text-[9px] rounded-full border border-[#8b949e] px-[8px] py-[0.8px]
+}
+.gitHeadCom{
+  @apply text-[#8b949e] font-inter font-[500] text-[13px] tracking-[-.02em] leading-[1.4]
+}
+.gitBody{
+  @apply px-[16px] pt-[16px] pb-[30px]
+}
+.gitBodyTop{
+  @apply font-inter text-[13px] tracking-[-.02em] leading-[1.4] whitespace-pre-wrap text-[#c9d1d9]
+}
+.gitFlex{
+  @apply flex items-center space-x-1 w-fit flex-row
+}
+.gitBodyBold{
+  @apply font-[600]
+}
+.gitBodyLink{
+  @apply text-[#58a6ff] inline-block relative
+}
+.gitTable{
+  @apply table-auto mt-[12px]
+}
+.taBor{
+  @apply border-l border-b border-[#30363d]
+}
+.taPad{
+  @apply p-[8px] font-inter text-mainWhite text-[.71rem] border-r border-[#30363d] font-[300]
+}
+.tabBlue{
+  @apply text-[#58a6ff]
+}
+.engQuote{
+  @apply mt-[20px] font-[400] text-[#777] tracking-[-.02em] text-[1.2rem] text-center gm:text-right gm:w-[75%] gm:ml-auto font-inter gm:pr-[45px] capitalize
+}
+.engCom{
+  @apply font-[400] font-inter flex  justify-center flex-col-reverse space-y-4 gm:flex-row gm:justify-end items-center gm:space-y-0 gm:space-x-2
+}
+.engAuth{
+  @apply font-[400] text-[#555] tracking-[-.02em] text-[.875rem] mt-2 gm:mt-0
+}
+.authBold{
+  @apply font-[500]
+}
+.engPict{
+  @apply w-[40px] h-[40px] rounded-full relative
+}
+.lineDotWrap{
+  @apply relative w-[1px] h-[100px] order-first gm:h-auto mx-auto gm:order-2
+}
+.lineBullet{
+  @apply py-[2px] bg-mainBlack w-[13px] h-[17px] absolute bottom-0 gm:top-28 left-[-6px]
+}
+.lineBulletSolid{
+  @apply absolute w-full h-full border-2 rounded-full border-[#555]
+}
+.workCont{
+  @apply overflow-x-hidden flex-1 pl-0 flex items-center gm:pl-[64px] pt-[30px] pb-[20px] order-2 gm:pt-[100px] gm:pb-[90px] gm:order-3
+}
+.workImg{
+  @apply w-[60px] h-[60px] gm:w-[45px] gm:h-[45px] mb-[20px] mx-auto gm:mx-0
+}
+.workImgBox{
+  @apply relative w-full h-full aspect-1
+}
+.workMiniTitle{
+  @apply text-mainWhite font-inter font-[600] text-[18px] mk:text-[22px] tracking-[-.05em] text-center gm:text-left
+}
+.workMiniDesc{
+  @apply text-[#888] font-inter tracking-[-.02em] text-[12px] leading-[23px] mk:text-[14px] mk:leading-[25px] font-[400] text-center gm:text-left
+}
+/* End Work Flow */
+
+/* Pricing High */
+.pricingHigh{
+  @apply px-[4vmin] py-[70px] bg-kingBlack relative
+}
+.pricingGrid{
+  @apply grid grid-rows-1 grid-cols-4 relative mt-8 max-w-2xl mx-auto pb-8  gap-y-5 xg:gap-y-0 xg:pb-0 xg:max-w-[120rem]
+}
+.pricingCol{
+  @apply col-span-4 flex items-center xg:col-span-1
+}
+.pricingWrapper{
+  @apply bg-[#121212] pt-6 px-6 pb-4 gg:px-8 gg:pt-12 w-full h-full xz:h-[90%] xz:my-auto xg:pb-12
+}
+.pricingColWhite{
+  @apply col-span-4 bg-white  pt-6 px-6 pb-3 gg:px-8 gg:pt-12 xg:col-span-1 rounded
+}
+.pricingHeader{
+  @apply font-inter
+}
+.pricingIntro{
+  @apply flex justify-between mb-5
+}
+.pricingType{
+  @apply text-white tracking-[.025em] font-[600] uppercase text-[14px]
+}
+.pricingColorful{
+  @apply text-white tracking-[.025em] font-[600] text-[14px]
+}
+.pricingTop{
+  @apply flex flex-col xs:flex-row xs:items-center xs:justify-between gg:justify-start gg:flex-col gg:items-start
+}
+.priceStart{
+  @apply text-white text-[14px]
+}
+.pricingCur{
+  @apply flex items-center mt-1
+}
+.currency{
+  @apply text-slate-300 font-normal text-4xl
+}
+.curFront{
+  @apply text-5xl font-bold tracking-tight text-white ml-[2px]
+}
+.curBack{
+  @apply text-[16px] font-[400] text-white
+}
+.curBackDet{
+  @apply text-[11px] font-[400] text-white/60
+}
+.pricingCta{
+  @apply w-full xs:w-fit gg:w-full
+}
+.pricingBut{
+  @apply bg-white/20 hover:bg-white/30 text-white mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full cursor-pointer transition-all duration-200
+}
+.pricingRecom{
+  @apply text-white/30 text-center capitalize tracking-[-.02em] text-[14px] py-3
+}
+.zincDark{
+  @apply text-zinc-700
+}
+.slateSoft{
+  @apply text-slate-600
+}
+.slateDark{
+  @apply text-slate-800
+}
+.pricingButDark{
+  @apply bg-kingBlack hover:bg-kingBlack/90 text-white mt-6 w-full inline-block py-2 px-8 border border-transparent rounded-md shadow-sm text-center text-sm font-medium sm:mt-0 sm:w-auto lg:mt-6 lg:w-full cursor-pointer transition-all duration-200
+}
+.offerSuperDesc{
+  @apply w-[85%] mx-auto font-inter text-semiGrey text-center pb-[30px] text-[13px] mx:pb-[40px] gs:text-[15px] sm:w-[60%] mk:w-[50%] xg:w-[40%] 
+}
+/* End Pricing High */
+
+/* Pricing Detail */
+.pricingDetail{
+  @apply px-[4vmin] py-[70px] bg-kingBlack relative
+}
+.pricingWrapperLong{
+  @apply h-full xz:h-[98%]
+}
+.pricingList{
+  @apply mt-2
+}
+.pricingItem{
+  @apply flex space-x-4 text-zinc-200  font-inter font-[500] text-[12px] py-2 border-b border-zinc-500 items-center capitalize last:border-0
+}
+.pricingDark{
+  @apply text-gray-800 border-gray-200
+}
+/* End Pricing Detail */

@@ -1,0 +1,10 @@
+export { default as CollabHigh } from './CollabHigh';
+export { default as PortofolioHigh } from './PortofolioHigh';
+export { default as PricingHigh } from './PricingHigh';
+export { default as PricingDetail } from './PricingDetail';
+export { default as ServicesHigh } from './ServicesHigh';
+export { default as SplitWeb } from './SplitWeb';
+export { default as SuperMan } from './SuperMan';
+export { default as TestiSlider } from './TestiSlider';
+export { default as WorkFlow } from './WorkFlow';
+export { default as TrustedCust } from './TrustedCust';
